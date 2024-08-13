@@ -14,6 +14,7 @@ public class City {
     @Id
     @Column(name = "codecity")
     private String codecity;
+
     private String namecity;
 
     @ManyToOne()
@@ -21,6 +22,10 @@ public class City {
     private Region region;
 
     
+    public City() {
+    }
+
+
     public City(String codecity, String namecity) {
         this.codecity = codecity;
         this.namecity = namecity;

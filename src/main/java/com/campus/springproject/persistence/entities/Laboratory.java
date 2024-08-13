@@ -10,7 +10,7 @@ import jakarta.persistence.Table;
 
 
 @Entity
-@Table(name = "labortory")
+@Table(name = "laboratory")
 public class Laboratory {
 
     @Id
@@ -26,6 +26,13 @@ public class Laboratory {
         this.id = id;
         this.namelab = namelab;
     }
+
+    
+
+    public Laboratory() {
+    }
+
+
 
     public Long getId() {
         return id;

@@ -27,6 +27,12 @@ public class Region {
 
     }
 
+    
+
+    public Region() {
+    }
+
+
 
     public String getCodereg() {
         return codereg;

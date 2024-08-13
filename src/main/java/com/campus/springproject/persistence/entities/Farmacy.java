@@ -11,6 +11,7 @@ import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import jakarta.persistence.UniqueConstraint;
 
 
 @Entity
@@ -29,7 +30,7 @@ public class Farmacy {
     private String logofarmacy;
 
     @ManyToOne
-    @JoinColumn(name = "codecityfarm", referencedColumnName = "codecity")
+    @JoinColumn(name = "codecityfarmacy", referencedColumnName = "codecity")
     private City city;
     
 
@@ -37,7 +38,8 @@ public class Farmacy {
     @JoinTable(
         name = "farmacymedicine",
         joinColumns = @JoinColumn(name = "idfarmacy"),
-        inverseJoinColumns = @JoinColumn(name = "id")
+        inverseJoinColumns = @JoinColumn(name = "id"),
+        uniqueConstraints = {@UniqueConstraint(columnNames = {"idfarmacy", "id"})}
     )
     private List<Medicine> medicine;
 

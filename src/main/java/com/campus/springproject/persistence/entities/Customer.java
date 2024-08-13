@@ -25,13 +25,14 @@ public class Customer {
 
 
     private String emailcustomer;
-    private Date bithdate;
+    private String birthdate;
     private Float lon;
     private Float latitud;
 
 
     public Customer() {
     }
+    
     public Customer(String idcustomer, String namecustomer, String lastnamecustomer, String codecitycustomer,
             String emailcustomer, Date bithdate, Float lon, Float latitud) {
 
@@ -77,17 +78,6 @@ public class Customer {
         this.emailcustomer = emailcustomer;
     }
 
-
-    public Date getBithdate() {
-        return bithdate;
-    }
-
-
-    public void setBithdate(Date bithdate) {
-        this.bithdate = bithdate;
-    }
-
-
     public Float getLon() {
         return lon;
     }
@@ -111,6 +101,12 @@ public class Customer {
     }
     public void setCity(City city) {
         this.city = city;
+    }
+    public String getBirthdate() {
+        return birthdate;
+    }
+    public void setBirthdate(String birthdate) {
+        this.birthdate = birthdate;
     }
 
 

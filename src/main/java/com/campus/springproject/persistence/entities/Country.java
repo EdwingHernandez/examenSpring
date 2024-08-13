@@ -21,6 +21,14 @@ public class Country {
         this.namecountry = namecountry;
     }
 
+    
+
+
+    public Country() {
+    }
+
+
+
 
     public String getCodecountry() {
         return codecountry;

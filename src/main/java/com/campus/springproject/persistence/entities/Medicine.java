@@ -1,12 +1,13 @@
 package com.campus.springproject.persistence.entities;
 
-import java.util.List;
+// import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+// import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
@@ -42,8 +43,8 @@ public class Medicine {
     @JoinColumn(name = "codelab", referencedColumnName = "id")
     private Laboratory laboratory;
 
-    
-    private List<Farmacy> farmacy;
+    // @ManyToMany()
+    // private List<Farmacy> farmacy;
     
 
     public Medicine() {
@@ -160,14 +161,14 @@ public class Medicine {
     }
 
 
-    public List<Farmacy> getFarmacy() {
-        return farmacy;
-    }
+    // public List<Farmacy> getFarmacy() {
+    //     return farmacy;
+    // }
 
 
-    public void setFarmacy(List<Farmacy> farmacy) {
-        this.farmacy = farmacy;
-    }
+    // public void setFarmacy(List<Farmacy> farmacy) {
+    //     this.farmacy = farmacy;
+    // }
 
 
 

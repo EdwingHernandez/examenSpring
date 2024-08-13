@@ -1,4 +1,4 @@
-package com.campus.springproject.persistence.repositories;
+package com.campus.springproject.domain.services;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,8 +6,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.campus.springproject.domain.services.FarmacyService;
 import com.campus.springproject.persistence.entities.Farmacy;
+import com.campus.springproject.persistence.repositories.FarmacyRepository;
 
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
