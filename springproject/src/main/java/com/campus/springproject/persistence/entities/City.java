@@ -17,8 +17,8 @@ public class City {
     private String namecity;
 
     @ManyToOne()
-    @JoinColumn(name = "codereg")
-    private String codereg;
+    @JoinColumn(name = "codereg", referencedColumnName = "codereg")
+    private Region region;
 
     
     public City(String codecity, String namecity) {
@@ -47,14 +47,17 @@ public class City {
     }
 
 
-    public String getCodereg() {
-        return codereg;
+    public Region getRegion() {
+        return region;
     }
 
 
-    public void setCodereg(String codereg) {
-        this.codereg = codereg;
+    public void setRegion(Region region) {
+        this.region = region;
     }
+
+
+
 
 
     

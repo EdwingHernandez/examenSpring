@@ -19,8 +19,8 @@ public class Laboratory {
     private String namelab;
 
     @ManyToOne
-    @JoinColumn(name = "codecity")
-    private String codecityreg;
+    @JoinColumn(name = "codecityreg", referencedColumnName ="codecity")
+    private City city;
 
     public Laboratory(Long id, String namelab) {
         this.id = id;
@@ -43,13 +43,15 @@ public class Laboratory {
         this.namelab = namelab;
     }
 
-    public String getCodecityreg() {
-        return codecityreg;
+    public City getCity() {
+        return city;
     }
 
-    public void setCodecityreg(String codecityreg) {
-        this.codecityreg = codecityreg;
+    public void setCity(City city) {
+        this.city = city;
     }
+
+ 
 
     
     
