@@ -3,6 +3,7 @@ package com.campus.springproject.persistence.entities;
 import java.util.Date;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
@@ -13,6 +14,7 @@ import jakarta.persistence.Table;
 @Table(name = "customer")
 public class Customer {
 
+    @Id
     private String idcustomer;
     private String namecustomer;
     private String lastnamecustomer;
